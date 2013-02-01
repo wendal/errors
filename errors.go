@@ -14,7 +14,7 @@ var AddStack = true
 
 // New returns an error that formats as the given text.
 func New(text string) error {
-	if AddS {
+	if AddStack {
 		text += "\n" + string(debug.Stack())
 	}
 	return &errorString{text}
